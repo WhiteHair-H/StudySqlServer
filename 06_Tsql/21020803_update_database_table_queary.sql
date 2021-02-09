@@ -1,28 +1,28 @@
 use sqlDB;
 go
 
---DML Áß select
+--DML ï¿½ï¿½ select
 select * from testTBL1;
 
---DML Áß insert
-insert into testTBL1 values (1, 'È«±æµ¿', 25);
-insert into testTBL1(id, userName) values (2, '¼³Çö');
+--DML ï¿½ï¿½ insert
+insert into testTBL1 values (1, 'È«ï¿½æµ¿', 25);
+insert into testTBL1(id, userName) values (2, 'ï¿½ï¿½ï¿½ï¿½');
 insert into testTBL1 (id, age) values (30, 4);
 
-insert into testTBL1 values ('¼º½Ã°æ', 44);
+insert into testTBL1 values ('ï¿½ï¿½ï¿½Ã°ï¿½', 44);
 
 exec sp_help 'testTBL1'
 
--- ÇöÀç identity ¸¶Áö¸· °ªÀÌ ¾îµòÁö ³ªÅ¸³»ÁÜ
+-- ï¿½ï¿½ï¿½ï¿½ identity ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½
 select IDENT_CURRENT('testTBL1')
 
--- µ¥ÀÌÅÍº£ÀÌ½º À§Ä¡°¡ ´Þ¶óµµ ´Ù¸¥ µ¥ÀÌÅÍº£ÀÌ½º¸¦ °¡Á®¿Ã ¼ö ÀÖÀ½
+-- ï¿½ï¿½ï¿½ï¿½ï¿½Íºï¿½ï¿½Ì½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Þ¶ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Íºï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 select * from BikeStores.sales.order_items;
 
 select * from ShopDB.dbo.memberTbl;
 
 
--- sale.order_items Å×ÀÌºí º¹»ç
+-- sale.order_items ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½
 CREATE TABLE [sales_order_items](
 	[order_id] [int] NOT NULL,
 	[item_id] [int] NOT NULL,
@@ -43,7 +43,7 @@ select * from sales_order_items
 select * from testTBL1;
 
 update testTBL1
-	set userName = '¼º¼ö°æ',
+	set userName = 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
 	age = 30
 	--where id = 33;
 
