@@ -29,6 +29,24 @@ group by h
 - [참조](https://lollolzkk.tistory.com/44)
 
 
+```sql
+SELECT animal_id , name , sex_upon_intake
+from animal_ins
+where name regexp "ucy|Ella|Pickle|Rogan|Sabrina|Mitty"
+order by animal_id
+```
+
+- regexp는 문자열 내부에 어떤 부분이든 해당 정규식이 존재한다면 True
+- 정규식으로 사용하려면 아래와 같이 시작과 끝 정확히 
+
+정규식
+```sql
+SELECT animal_id , name , sex_upon_intake
+from animal_ins
+where name regexp "^(Lucy|Ella|Pickle|Rogan|Sabrina|Mitty)$"
+order by animal_id
+```
+
 
 
 
