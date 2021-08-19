@@ -1,7 +1,9 @@
 # StudySqlServer
 SQL 리포지토리
 
-## 예시
+<br>
+
+## 풀이
 - 0시부터 23시까지 시간대별 입양 건수
 - animal_outs -> 7 ~ 19
 - time 가상테이블 생성후 아우터 조인
@@ -23,6 +25,8 @@ left outer join animal_outs
 on (h = hour(datetime))
 group by h
 ```
+
+<br>
 
 - REGEXP 연산자는 LIKE보다 복잡한 패턴을 검색 할때 사용한다.
 - SELECT [필드명] FROM [테이블명] WHERE [필드명] REGEXP '특정 문자열|특정 문자열2';
@@ -47,6 +51,7 @@ where name regexp "^(Lucy|Ella|Pickle|Rogan|Sabrina|Mitty)$"
 order by animal_id
 ```
 
+<br>
 
 - 문자열 치환
 
@@ -60,6 +65,8 @@ sex_upon_intake like "%Spayed%"
 from animal_ins
 order by animal_id
 ```
+
+<br>
 
 - 서브쿼리 사용 및 날짜 연산
 
@@ -78,6 +85,8 @@ from (
 order by c.보호기간 desc
 limit 2
 ```
+
+<br>
 
 - 날짜 포맷
 - %y, %Y 대소문자에 따라서 결과값달
