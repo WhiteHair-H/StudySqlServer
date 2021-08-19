@@ -61,6 +61,23 @@ from animal_ins
 order by animal_id
 ```
 
+- 서브쿼리 사용 및 날짜 연산
+
+```sql
+select c.animal_id , c.name
+from (
+    SELECT b.animal_id 
+         , b.name 
+    --     , b.datetime as 보호시작 
+    --     , a.datetime as 입양 
+         , datediff(a.datetime,b.datetime) as 보호기간
+    from animal_outs as a
+    inner join animal_ins as b
+        On a.animal_id = b.animal_id
+)c
+order by c.보호기간 desc
+limit 2
+```
 
 
 
