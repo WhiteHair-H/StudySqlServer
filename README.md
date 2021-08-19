@@ -24,8 +24,9 @@ on (h = hour(datetime))
 group by h
 ```
 
-
-
+- REGEXP 연산자는 LIKE보다 복잡한 패턴을 검색 할때 사용한다.
+- SELECT [필드명] FROM [테이블명] WHERE [필드명] REGEXP '특정 문자열|특정 문자열2';
+- [참조](https://lollolzkk.tistory.com/44)
 
 
 
