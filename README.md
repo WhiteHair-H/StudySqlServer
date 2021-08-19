@@ -79,7 +79,15 @@ order by c.보호기간 desc
 limit 2
 ```
 
+- 날짜 포맷
+- %y, %Y 대소문자에 따라서 결과값달
 
+```sql
+SELECT animal_id 
+     , name 
+     , date_format(datetime , "%Y-%m-%d")  '날짜'
+from animal_ins
+```
 
 
 
