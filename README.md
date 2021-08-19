@@ -8,8 +8,13 @@ SQL 리포지토리
 
 ```sql
 with recursive time as (
+    -- 초기sql
     select 0 h
+    
+    -- 
     union all
+    
+    -- 반복할 sql(반복을 멈출 where절 포함)
     select h + 1 from time where h < 23
 )
 SELECT h , count(hour(datetime)) COUNT
